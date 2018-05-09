@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view){
         startActivityForResult(new Intent("com.ushulabubko645.UsingIntent.SecondActivity"), request_code);
     }
-    public void onActivationResult(int requestCode, int resultCode, Intent data){
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
         if (requestCode==request_code){
             if (resultCode == RESULT_OK){
                 Toast.makeText(this,data.getData().toString(),Toast.LENGTH_SHORT).show();
